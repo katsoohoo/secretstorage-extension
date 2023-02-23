@@ -1,0 +1,55 @@
+{
+  "name": "secretstorage-extension",
+  "displayName": "secretstorage-extension",
+  "description": "A test extension to recreate SecertStorage API issue.",
+  "version": "0.0.1",
+  "repository": "https://github.com/katsoohoo/secretstorage-extension",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "secretstorage-extension.allSettled",
+        "title": "Use SecertStoarge with Promise.allSettled"
+      },
+      {
+        "command": "secretstorage-extension.awaitPromiseWithLoop",
+        "title": "Use SecretStorage with await Promise with loop"
+      },
+      {
+        "command": "secretstorage-extension.awaitPromiseNoLoop",
+        "title": "Use SecretStorage with await Promise without loop"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.1",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "@vscode/test-electron": "^2.2.2",
+    "@vscode/vsce": "^2.17.0",
+    "eslint": "^8.33.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {}
+}
