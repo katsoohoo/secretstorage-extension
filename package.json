@@ -3,6 +3,7 @@
   "displayName": "secretstorage-extension",
   "description": "A test extension to recreate SecertStorage API issue.",
   "version": "0.0.1",
+  "publisher": "kat-test",
   "repository": "https://github.com/katsoohoo/secretstorage-extension",
   "engines": {
     "vscode": "^1.75.0"
